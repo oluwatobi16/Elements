@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>Chemistry website</title>
         <meta charset="UTF-8">
@@ -23,5 +23,13 @@
           
           </nav>
         <h1>Add or remove an element here</h1>
+        <form action='/element/add' onsubmit="return validateForm()" method='post'>
+          <!-- <form name="InputForm"  onsubmit="return validateForm()" method='post'> -->
+            <!-- <form name="InputForm" action='/thing/add' onsubmit="return validateForm()" method='post'> -->
+           <!-- <input type='text'> -->
+          <input name='chemical' type='text'>
+          <input type='submit' value='submit'>
+            </form>
+            <script src="/client/index.js"></script>
     </body>
 </html>
