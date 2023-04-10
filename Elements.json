@@ -1,0 +1,16 @@
+{"Elements":[
+    {"name":"Lithium","group":1,"symbol":"Li","price":10},
+    {"name":"Sodium","group":1,"symbol":"Na","price":10},
+    {"name":"Berylium","group":2,"symbol":"Be","price":20},
+    {"name":"Magnesium","group":2,"symbol":"Mg","price":20},
+    {"name":"Boron","group":3,"symbol":"B","price":30},
+    {"name":"Aluminium","group":3,"symbol":"Al","price":30},
+    {"name":"Carbon","group":4,"symbol":"C","price":40},
+    {"name":"Silicon","group":4,"symbol":"Si","price":40},
+    {"name":"Nitrogen","group":5,"symbol":"N","price":50},
+    {"name":"Phosphorus","group":5,"symbol":"P","price":50},
+    {"name":"Oxygen","group":6,"symbol":"O","price":60},
+    {"name":"Sulfur","group":6,"symbol":"S","price":60},
+    {"name":"Fluorine","group":7,"symbol":"F","price":70},
+    {"name":"Chlorine","group":7,"symbol":"Cl","price":70}
+]}
