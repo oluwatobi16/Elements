@@ -3,7 +3,7 @@
     <head>
         <title>Chemistry website</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="/styles.css">
+        <link rel="stylesheet" href="styles.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
@@ -23,13 +23,33 @@
           
           </nav>
         <h1>Add or remove an element here</h1>
-        <form action='/element/add' onsubmit="return validateForm()" method='post'>
-          <!-- <form name="InputForm"  onsubmit="return validateForm()" method='post'> -->
-            <!-- <form name="InputForm" action='/thing/add' onsubmit="return validateForm()" method='post'> -->
-           <!-- <input type='text'> -->
-          <input name='chemical' type='text'>
-          <input type='submit' value='submit'>
-            </form>
-            <script src="/client/index.js"></script>
+        <div>
+          <form action="http://127.0.0.1:8090/thing/add" method="post">
+            <input id ="newelement" type="text">
+            <input id ="newgroup" type="text">
+            <input id="newsymbol" type="text">
+            <input id="newprice" type="text">
+            <input type="submit" id="submit_thing">
+          </form>
+              </form>
+              </div>
+        <div class="container mt-3" id="table">
+          <h2>Chemical Element List</h2>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Group</th>
+                <th>Symbol</th>
+                <th>Price(£)</th>
+              </tr>
+            </thead>
+            <tbody id="things">
+
+            </tbody>
+          </table>
+          </div>
+          
+            <script src="admin.js"></script>
     </body>
 </html>
