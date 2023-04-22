@@ -1,34 +1,49 @@
 const express = require('express');
 const app = express();
-
 const path = require('path')
-app.use(express.static('Chemicals'))
-let chemical=[]
+const fs = require('fs')
+const cors = require('cors')
+
+app.use(cors())
+app.use(express.json())
+app.use(express.static('body-parser'));
+app.use(express.static('client'))
+
 let Chemicals = require('./Chemicals.json')
+const { ok } = require('assert');
+const { json } = require('body-parser');
+
 
 
 app.get('/',(req, res) => {
-  res.sendFile(path.resolve('client','index.html'));
+  res.status(200).sendFile(path.join('client','index.html'))
+
 })
 app.get('/admin',(req,res) =>{
-  res.sendFile(path.resolve('client','admin.html'));
+  res.status(200).sendFile(path.resolve('client','admin.html'));
 })
-app.get('/Chemicals', function(req, resp){
+app.get('/list', function(req, res){
+  res.setHeader('Access-Control-Allow-Origin', 'http://localhost:8090');
   if(Chemicals == undefined || Chemicals.length == 0)
   {
-   resp.status(404).json("Sorry folks, don't have a list of Jugnoo things!");
+   res.status(404).json("Sorry, Chemicals list is empty");
   }
   else{
-    resp.json(Chemicals);
+   res.send(Chemicals)
   }
  })
- app.post('/element/add', function(req,resp){
-  //console.log(req)
- console.log(req.body);
-  resp.send("I am Posting!");
-  const newchemical= req.body.newchemical;
-  chemical.push(newchemical);
+ app.post('/thing/add', function(req,res){
+  console.log(req.body);
+  const newID = Chemicals[Chemicals.length - 1].id + 1;
+  const newelement = Object.assign({id:newID}, req.body)
+  Chemicals.push(newelement)
+  fs.writeFile('./Chemicals.json',JSON.stringify(Chemicals), (err) =>{
+    res.status(201)
+
+  })
+
+
 });
 
 
-app.listen(8080, () => console.log('server running'));
+app.listen(8090, () => console.log('server running'));
