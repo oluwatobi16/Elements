@@ -3,9 +3,9 @@
     <head>
         <title>Chemistry website</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="/styles.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-        <script src="/client/index.js"></script>
+        <link rel="stylesheet" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <nav class="navbar navbar-expand-sm bg-secondary">
@@ -23,8 +23,24 @@
             </div>
           
           </nav>
-        <h1>Buy elements you need on this website</h1>
-        <ul id="chemical">Chemical list</p>
-         
+        <h1>Buy Chemical elements you need on this website</h1>
+        <div class="container mt-3" id="table">
+          <h2>Chemical Element List</h2>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Group</th>
+                <th>Symbol</th>
+                <th>Price(£)</th>
+              </tr>
+            </thead>
+            <tbody id="things">
+
+            </tbody>
+          </table>
+        </div>
+       
     </body>
+    <script src="index.js"></script>
 </html>
