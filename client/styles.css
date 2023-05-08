@@ -1,0 +1,34 @@
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+#formulations{
+    text-align: center;
+}
+body{
+    background-color:rgba(0,255,0,0.3);
+}
+
+img{
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+    background: transparent;
+
+}
+#flask{
+    background: transparent;
+}
+#coulor{
+    background-color:rgba(0,255,0,0.3);
+}
+
+.navbar{
+    background: url(/images/BRBA.jpg);
+    background-position: right;
+    background-size: 100px 80px;
+    background-repeat: no-repeat;
+}
+
